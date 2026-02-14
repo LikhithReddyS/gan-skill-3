@@ -1,0 +1,28 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Model checkpoints (too large for GitHub)
+checkpoints/*.pt
+checkpoints/*.pth
+
+# Data
+data/
+
+# OS
+.DS_Store
+Thumbs.db

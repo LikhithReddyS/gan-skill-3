@@ -1,0 +1,40 @@
+# Training Configuration for DCGAN
+
+# Model settings
+model:
+  latent_dim: 100
+  g_feature_maps: 64
+  d_feature_maps: 64
+
+# Training settings
+training:
+  epochs: 100
+  batch_size: 64
+  
+# Optimizer settings (Adam)
+optimizer:
+  lr: 0.0002
+  beta1: 0.5
+  beta2: 0.999
+
+# Stabilization tricks
+stabilization:
+  label_smoothing: 0.9  # Real labels = 0.9 instead of 1.0
+  gradient_clip: 1.0
+  
+# Checkpointing
+checkpoint:
+  save_interval: 10  # Save every N epochs
+  checkpoint_dir: "checkpoints"
+
+# Sample generation
+samples:
+  save_interval: 5  # Generate samples every N epochs
+  num_samples: 64   # Number of samples to generate
+  samples_dir: "samples"
+
+# Logging
+logging:
+  log_interval: 50  # Log every N batches
+  log_dir: "logs"
+  tensorboard: true

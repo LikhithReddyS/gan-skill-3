@@ -1,0 +1,38 @@
+# Data Configuration for Cancer GAN Project
+
+# Dataset paths
+data:
+  root_dir: "data/breast_cancer"
+  train_dir: "data/breast_cancer/train"
+  val_dir: "data/breast_cancer/val"
+  test_dir: "data/breast_cancer/test"
+
+# Image settings
+image:
+  size: 64
+  channels: 3
+  normalize_range: [-1, 1]
+
+# Data splits
+splits:
+  train: 0.8
+  val: 0.1
+  test: 0.1
+
+# DataLoader settings
+dataloader:
+  batch_size: 64
+  num_workers: 4
+  shuffle: true
+  pin_memory: true
+
+# Augmentation
+augmentation:
+  horizontal_flip: true
+  vertical_flip: true
+  rotation: 0
+
+# Classes (for breast cancer: 0=benign, 1=malignant)
+classes:
+  - benign
+  - malignant
